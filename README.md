@@ -32,7 +32,8 @@ Quantization, Efficient Inference, Neural Networks
 
 
 ## Experiment
-ResNet-56 on CIFAR-10. (Image classification)
+
+### 1. ResNet-56 on CIFAR-10.
 
 ### Training & structure pruning stage
 
