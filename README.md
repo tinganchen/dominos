@@ -8,17 +8,17 @@ Quantization, Efficient Inference, Neural Networks
 * cudatoolkit==11.0.221 
 * numpy==1.19.2
 * tensorboardx==1.4
+* ptflops ([Github](https://github.com/sovrasov/flops-counter.pytorch))
+
+
+## Pretrained model download
+
+* [VGG-16 on CIFAR-10](https://drive.google.com/file/d/1Jk3gxPIQMZMw42ihyN5YNq3--12P654V/view?usp=sharing)
+* [ResNet-56 on CIFAR-10](https://drive.google.com/file/d/1Jk3gxPIQMZMw42ihyN5YNq3--12P654V/view?usp=sharing)
+
 
 ## Experiment
 ResNet-56 on CIFAR-10. (Image classification)
-
-
-## Implementation
-
-### Pretrained model preparation
-
-The pretrained weights are downloaded from GAL ([Github](https://github.com/ShaohuiLin/GAL)).
-
 
 ### Training & structure pruning stage
 
@@ -42,7 +42,4 @@ Resnet-56 (Original) |Pretrained           | 27                                 
 Resnet-56 (Sparse)   |Training & Pruning   | 27                                    |125.49M (0%)           |0.85M (0%)                  | 91.72      
 Resnet-56 (Pruned)   |Pruned & Fine-tuning | 17                                    |79.24M (37.7%)         |0.67M (21.7%)               | 92.22  
 
-## References
 
-FLOP calculation tool-
-* ptflops ([Github](https://github.com/sovrasov/flops-counter.pytorch))
