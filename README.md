@@ -35,7 +35,7 @@ Quantization, Efficient Inference, Neural Networks
 
 ### e.g. ResNet-56 on CIFAR-10.
 
-### Preparation for the pretrained weights
+### Preparation of pretrained weights
 
 ```shell
 cd dominos/resnet-56-cifar-10
@@ -46,21 +46,20 @@ Download the pretrained weights under the path dominos/resnet-56-cifar-10/pretra
 ### Dominant Structure Search (DSS) stage
 
 ```shell
-python main.py --job_dir <experiment_results_dir> --teacher_dir <pretrain_weights_dir> --teacher_file <pretrain_weights_file> --refine None --arch resnet --teacher_model resnet_56 --student_model resnet_56_sparse --num_epochs 100 --train_batch_size 128 --eval_batch_size 100 --lr 0.01 --momentum 0.9 --miu 1 --sparse_lambda 0.6 --lr_decay_step 30 --mask_step 200 --weight_decay 0.0002
+python main.py --job_dir <pruning_results_dir> --teacher_dir <pretrain_weights_dir> --teacher_file <pretrain_weights_file> --refine None --arch resnet --teacher_model resnet_56 --student_model resnet_56_sparse --num_epochs 100 --train_batch_size 128 --eval_batch_size 100 --lr 0.01 --momentum 0.9 --miu 1 --sigma 0.2 --mask 0.3 --sparse_lambda 0.001 --sparse_lambda2 0.01 --lr_decay_step 30 --mask_step 200 --weight_decay 0.0002 --t 2 --thres 0.2
 ```
 
 ### Fine-tuning stage
 
 ```shell
-python finetune.py --job_dir <finetuning_results_dir> --refine <experiment_results_dir> --num_epochs 30 --lr 0.01
+python ft.py --job_dir <finetuning_results_dir> --refine <pruning_results_dir> --num_epochs 100 --lr 0.05
 ```
 
 ### Results
 
-Model                | Stage               | #Sructures (blocks)   | FLOPs (pruned ratio)  | #Param (pruned ratio) | Top-1 accuracy
----                  |---                  |---                                    |---                    |---                         |---     
-Resnet-56 (Original) |Pretrained           | 27                                    |125.49M (0%)           |0.85M (0%)                  | 93.26  
-Resnet-56 (Sparse)   |Training & Pruning   | 27                                    |125.49M (0%)           |0.85M (0%)                  | 91.72      
-Resnet-56 (Pruned)   |Pruned & Fine-tuning | 17                                    |79.24M (37.7%)         |0.67M (21.7%)               | 92.22  
+Dataset              |Model                | Top-1 err (%)     | Acc loss (%)   | FLOPs (pruned ratio)  | #Param (pruned ratio)
+---                  |---                  |---                |---             |---                    |---                    
+CIFAR-10             |VGG-16               | 6.59              |0.55            |67.7%                  |71.0%    
+CIFAR-10             |VGG-16               | 6.77              |0.73            |71.0%                  |83.0%  
 
 
