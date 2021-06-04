@@ -55,11 +55,12 @@ python main.py --job_dir <pruning_results_dir> --teacher_dir <pretrain_weights_d
 python ft.py --job_dir <finetuning_results_dir> --refine <pruning_results_dir> --num_epochs 100 --lr 0.05
 ```
 
-### Results
+## Results
 
 Dataset              |Model                | Top-1 err (%)     | Acc loss (%)   | FLOPs (pruned ratio)  | #Param (pruned ratio)
 ---                  |---                  |---                |---             |---                    |---                    
 CIFAR-10             |VGG-16               | 6.59              |0.55            |67.7%                  |71.0%    
 CIFAR-10             |VGG-16               | 6.77              |0.73            |71.0%                  |83.0%  
-
+---                  |---                  |---                |---             |---                    |---   
+CIFAR-10             |VGG-16               | 6.77              |0.73            |71.0%                  |83.0% 
 
