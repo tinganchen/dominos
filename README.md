@@ -11,10 +11,12 @@ Quantization, Efficient Inference, Neural Networks
 * ptflops ([Github](https://github.com/sovrasov/flops-counter.pytorch))
 
 
-## Pretrained model download
+## Pretrained models download
 
 * [VGG-16 on CIFAR-10](https://drive.google.com/file/d/1Jk3gxPIQMZMw42ihyN5YNq3--12P654V/view?usp=sharing)
-* [ResNet-56 on CIFAR-10](https://drive.google.com/file/d/1Jk3gxPIQMZMw42ihyN5YNq3--12P654V/view?usp=sharing)
+* [ResNet-56 on CIFAR-10](https://drive.google.com/file/d/1z1oz-Set-iTnpOU2si-bqySzgcWzQjZN/view?usp=sharing)
+* [ResNet-110 on CIFAR-10](https://drive.google.com/file/d/1jOApBG_cvvSaAna8Jz4eXZP426ncX-6T/view?usp=sharing)
+* [DenseNet-40 on CIFAR-10](https://drive.google.com/file/d/1xeFqb2FU7d3Dq4T7tcRx_Gu6oFAUKOku/view?usp=sharing)
 
 
 ## Experiment
