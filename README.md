@@ -44,5 +44,5 @@ Resnet-56 (Pruned)   |Pruned & Fine-tuning | 17                                 
 
 ## References
 
-FLOP calculation tool- *ptflops*
-* [Github](https://github.com/sovrasov/flops-counter.pytorch) 
+FLOP calculation tool-
+* ptflops [Github](https://github.com/sovrasov/flops-counter.pytorch) 
