@@ -60,7 +60,12 @@ python ft.py --job_dir <finetuning_results_dir> --refine <pruning_results_dir> -
 Dataset              |Model                | Top-1 err (%)     | Acc loss (%)   | FLOPs (pruned ratio)  | #Param (pruned ratio)
 ---                  |---                  |---                |---             |---                    |---                    
 CIFAR-10             |VGG-16               | 6.59              |0.55            |67.7%                  |71.0%    
-CIFAR-10             |VGG-16               | 6.77              |0.73            |71.0%                  |83.0%  
----                  |---                  |---                |---             |---                    |---   
-CIFAR-10             |VGG-16               | 6.77              |0.73            |71.0%                  |83.0% 
+CIFAR-10             |VGG-16               | 6.77              |0.73            |71.0%                  |83.0%   
+CIFAR-10             |ResNet-56            | 6.29              |-0.45           |39.6%                  |43.5% 
+CIFAR-10             |ResNet-56            | 7.92              |1.18            |62.4%                  |72.9% 
+CIFAR-10             |ResNet-110           | 6.23              |-0.09           |57.3%                  |61.1% 
+CIFAR-10             |ResNet-110           | 6.37              |0.05            |62.4%                  |73.8% 
+CIFAR-10             |DenseNet-40          | 6.12              |0.93            |75.0%                  |77.0% 
+
+
 
