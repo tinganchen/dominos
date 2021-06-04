@@ -23,6 +23,13 @@ Quantization, Efficient Inference, Neural Networks
   - [ResNet-56](https://drive.google.com/file/d/12NTMSaEx1Th3HNIFIxk68j3Hr-VF5UXq/view?usp=sharing)
   - [ResNet-110](https://drive.google.com/file/d/1sIAsteFdPDAKN9KnYB6oCYbAx1dXnA4H/view?usp=sharing)
 
+* SVHN
+  - [VGG-16](https://drive.google.com/file/d/1H6I1s0wAfl1avuaiI61xdmD99xzJ82h8/view?usp=sharing)
+  - [MobileNet-v2](https://drive.google.com/file/d/1vX7I7xTyrrmYlkTaLOdu0cPck-3knAMM/view?usp=sharing)
+
+* ImageNet
+  - [ResNet-50](https://drive.google.com/file/d/1Zg7lxT-X7nmvEkL6fEik2gQdWuP_cGey/view?usp=sharing)
+
 
 ## Experiment
 ResNet-56 on CIFAR-10. (Image classification)
