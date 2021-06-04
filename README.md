@@ -34,19 +34,22 @@ Quantization, Efficient Inference, Neural Networks
 ## Experiment
 
 ### e.g. ResNet-56 on CIFAR-10.
+
+### Preparation for the pretrained weights
+
 ```shell
 cd dominos/resnet-56-cifar-10
 mkdir pretrained/
 ```
 Download the pretrained weights under the path dominos/resnet-56-cifar-10/pretrained/.
 
-#### Dominant Structure Search (DSS) stage
+### Dominant Structure Search (DSS) stage
 
 ```shell
 python main.py --job_dir <experiment_results_dir> --teacher_dir <pretrain_weights_dir> --teacher_file <pretrain_weights_file> --refine None --arch resnet --teacher_model resnet_56 --student_model resnet_56_sparse --num_epochs 100 --train_batch_size 128 --eval_batch_size 100 --lr 0.01 --momentum 0.9 --miu 1 --sparse_lambda 0.6 --lr_decay_step 30 --mask_step 200 --weight_decay 0.0002
 ```
 
-#### Fine-tuning stage
+### Fine-tuning stage
 
 ```shell
 python finetune.py --job_dir <finetuning_results_dir> --refine <experiment_results_dir> --num_epochs 30 --lr 0.01
