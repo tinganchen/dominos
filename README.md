@@ -46,13 +46,13 @@ Download the pretrained weights under the path dominos/resnet-56-cifar-10/pretra
 ### Dominant Structure Search (DSS) stage
 
 ```shell
-python main.py --job_dir <pruning_results_dir> --teacher_dir <pretrain_weights_dir> --teacher_file <pretrain_weights_file> --refine None --arch resnet --teacher_model resnet_56 --student_model resnet_56_sparse --num_epochs 100 --train_batch_size 128 --eval_batch_size 100 --lr 0.01 --momentum 0.9 --miu 1 --sigma 0.2 --mask 0.3 --sparse_lambda 0.001 --sparse_lambda2 0.01 --lr_decay_step 30 --mask_step 200 --weight_decay 0.0002 --t 2 --thres 0.2
+python3 main.py --job_dir <pruning_results_dir> --teacher_dir <pretrain_weights_dir> --teacher_file <pretrain_weights_file> --refine None --arch resnet --teacher_model resnet_56 --student_model resnet_56_sparse --num_epochs 100 --train_batch_size 128 --eval_batch_size 100 --lr 0.01 --momentum 0.9 --miu 1 --sigma 0.2 --mask 0.3 --sparse_lambda 0.001 --sparse_lambda2 0.01 --lr_decay_step 30 --mask_step 200 --weight_decay 0.0002 --t 2 --thres 0.2
 ```
 
 ### Fine-tuning stage
 
 ```shell
-python ft.py --job_dir <finetuning_results_dir> --refine <pruning_results_dir> --num_epochs 100 --lr 0.05
+python3 ft.py --job_dir <finetuning_results_dir> --refine <pruning_results_dir> --num_epochs 100 --lr 0.05
 ```
 
 ## Results
