@@ -33,7 +33,7 @@ Pruning, Model Compression, Efficient Inference, Neural Networks ([PDF](https://
   - [ResNet-50](https://drive.google.com/file/d/1Zg7lxT-X7nmvEkL6fEik2gQdWuP_cGey/view?usp=sharing)
 
 
-## Experiment
+## Implementation
 
 ### e.g. ResNet-56 on CIFAR-10.
 
