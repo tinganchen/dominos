@@ -57,38 +57,5 @@ python3 main.py --job_dir <pruning_results_dir> --teacher_dir <pretrain_weights_
 python3 ft.py --job_dir <finetuning_results_dir> --refine <pruning_results_dir> --num_epochs 100 --lr 0.05
 ```
 
-## Results
-
-### CIFAR-10.
-
-Dataset              |Model                | Top-1 Error (%)   | Accuracy loss (%) | FLOPs (pruned ratio)  | #Param (pruned ratio)
----                  |---                  |---                |---             |---                    |---                    
-CIFAR-10             |VGG-16               | 6.59              |0.55            |67.7%                  |71.0%    
-CIFAR-10             |VGG-16               | 6.77              |0.73            |71.0%                  |83.0%   
-CIFAR-10             |ResNet-56            | 6.29              |-0.45           |39.6%                  |43.5% 
-CIFAR-10             |ResNet-56            | 7.92              |1.18            |62.4%                  |72.9% 
-CIFAR-10             |ResNet-110           | 6.23              |-0.09           |57.3%                  |61.1% 
-CIFAR-10             |ResNet-110           | 6.37              |0.05            |62.4%                  |73.8% 
-CIFAR-10             |DenseNet-40          | 6.12              |0.93            |75.0%                  |77.0% 
-
-### CIFAR-100.
-
-Dataset              |Model                | Top-1 Error (%)   | Accuracy loss (%) | FLOPs (pruned ratio)  | #Param (pruned ratio)
----                  |---                  |---                |---             |---                    |--- 
-CIFAR-100            |ResNet-56            | 29.83             |0.93            |73.5%                  |38.2% 
-CIFAR-100            |ResNet-110           | 27.55             |0.69            |62.0%                  |40.7% 
-
-### SVHN.
-
-Dataset              |Model                | Top-1 Error (%)   | Accuracy loss (%) | FLOPs (pruned ratio)  | #Param (pruned ratio)
----                  |---                  |---                |---             |---                    |--- 
-SVHN                 |VGG-16               | 3.96              |0.09            |86.3%                  |89.0%  
-SVHN                 |MobileNet-v2         | 4.06              |0.68            |60.3%                  |47.3% 
-
-### ImageNet.
-
-Dataset              |Model                | Top-1 Error (%)   | Accuracy loss (%) | FLOPs (pruned ratio)  | #Param (pruned ratio)
----                  |---                  |---                |---             |---                    |--- 
-ImageNet             |ResNet-50            | 28.17             |4.32            |41.0%                  |50.7% 
 
 
