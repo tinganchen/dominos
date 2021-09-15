@@ -1,7 +1,7 @@
 # Dominance in an Overall Sight: Attentive Channel Pruning via Filter Importance Learning (DOMINOS)
 Pruning, Model Compression, Efficient Inference, Neural Networks ([PDF](https://docs.google.com/presentation/d/1kT7uVIvh2oW031WpWqd9O6_GbdaWLu2-910LmsfcvI0/edit?usp=sharing))
 
-![image](img/contributions.png | width=100)
+<img src="img/contributions.png" width="100" height="100">
 
 ## Requirements
 
